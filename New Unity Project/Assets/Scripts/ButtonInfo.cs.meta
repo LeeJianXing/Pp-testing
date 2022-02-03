@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 223749977bde1b24a9020e723d117f7f
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - PriceTxt: {instanceID: 0}
+  - QuantityTxt: {instanceID: 0}
+  - ShopManager: {instanceID: 0}
+  - ItemIcon: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
