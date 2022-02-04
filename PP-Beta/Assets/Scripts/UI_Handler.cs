@@ -8,6 +8,10 @@ using UnityEngine.SceneManagement;
 public class UI_Handler : MonoBehaviour
 {
     public GameObject Camera;
+    public GameObject PlayerStats;
+    public GameObject Xbutton;
+
+   
 
     private Vector3 camMoveLeft;
     private Vector3 camMoveFastLeft;
@@ -113,7 +117,6 @@ public class UI_Handler : MonoBehaviour
         }
     }
 
-
     public void MouseDownCamLeft()
     {
         time = Time.deltaTime;
@@ -126,9 +129,6 @@ public class UI_Handler : MonoBehaviour
             Camera.transform.position = Camera.transform.position + camMoveFastLeft * Time.deltaTime;
             camPosX = Camera.transform.position.x;
         }
-
-
-
     }
     public void MouseDownCamRight()
     {
@@ -142,9 +142,26 @@ public class UI_Handler : MonoBehaviour
             Camera.transform.position = Camera.transform.position + camMoveFastRight * Time.deltaTime;
             camPosX = Camera.transform.position.x;
         }
+    }
 
+    public void InventoryCilcked()
+    { // canvas pos a little weird because is screen space-camera i follow the main canvas coordinate as reference
+       float canvasXPos = 960;
+       float canvasYUpPos = 640;
 
+       Vector2 PlayerStatsUp = new Vector2(canvasXPos,canvasYUpPos);
+       Xbutton.SetActive(true);
+       PlayerStats.transform.position = PlayerStatsUp;
+    }
 
+    public void InventoryXCilcked()
+    {
+        float canvasXPos = 960;
+        float canvasYOriPos = 540;
+
+        Vector2 PlayerStatsOriPos = new Vector2(canvasXPos,canvasYOriPos);
+        Xbutton.SetActive(false);
+        PlayerStats.transform.position = PlayerStatsOriPos;
     }
 
    
